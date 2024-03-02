@@ -44,14 +44,14 @@ while true; do
         # Log all players who have left
         for player in "${players_who_left_list[@]}"; do
             player_name=$( get_playername "${player}" )
-            LogInfo "${player_name} has left"
+            LogInfo "player: ${player_name} has left"
             broadcast_command "${player_name} has left"
         done
 
         # Log all players who have joined
         for player in "${players_who_joined_list[@]}"; do
             player_name=$( get_playername "${player}" )
-            LogInfo "${player_name} has joined"
+            LogInfo "player: ${player_name} has joined"
             broadcast_command "${player_name} has joined"
         done
 
